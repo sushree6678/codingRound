@@ -1,4 +1,7 @@
 import com.sun.javafx.PlatformUtil;
+
+import java.util.Set;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,7 +12,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class SignInTest {
-	WebDriver driver = null;
+private	WebDriver driver = null;
 	
 	@BeforeClass
 	public void setUpClass() {
@@ -22,18 +25,23 @@ public class SignInTest {
         driver.get("https://www.cleartrip.com/");
         waitFor(2000);
 	}
-	 
 
     @Test
     public void shouldThrowAnErrorIfSignInDetailsAreMissing() {
 
-        driver.findElement(By.id("email")).click();
-        driver.findElement(By.id("SignIn")).click();
-
+        driver.findElement(By.linkText("Your trips")).click();
+        driver.findElement(By.id("SignIn")).click();  
+        
+    //Here we have to use frame handling concept for element clicking in frame window because here iframe is present
+        driver.switchTo().frame(0);
+       
         driver.findElement(By.id("signInButton")).click();
 
         String errors1 = driver.findElement(By.id("errors1")).getText();
+        System.out.println(errors1);
         Assert.assertTrue(errors1.contains("There were errors in your submission"));
+             
+        waitFor(5000);
         
     }
 
@@ -58,8 +66,11 @@ public class SignInTest {
     }
     
     @AfterClass
-    public void tearDown() {
-    	driver.quit();
-    }
-
+	 //close the browser 
+	 public void tearDown() {
+		 if(driver!=null) {
+				System.out.println("Closing firefox browser");
+				driver.quit();
+			}
+	 }
 }

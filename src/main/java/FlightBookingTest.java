@@ -4,8 +4,10 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -13,7 +15,7 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 public class FlightBookingTest {
-	WebDriver driver = null;
+ private WebDriver driver = null;
 	
 	@BeforeClass
 	public void setUpClass() {
@@ -23,17 +25,13 @@ public class FlightBookingTest {
 	
 	@BeforeMethod
 	public void setUp() {
-        driver.get("https://www.cleartrip.com/");
+		driver.get("https://www.cleartrip.com/");
         waitFor(2000);
 	}
 
-
     @Test
     public void testThatResultsAppearForAOneWayJourney() {
-
-        setDriverPath();
-        driver.get("https://www.cleartrip.com/");
-        waitFor(2000);
+    	
         driver.findElement(By.id("OneWay")).click();
 
         driver.findElement(By.id("FromTag")).clear();
@@ -63,9 +61,6 @@ public class FlightBookingTest {
         waitFor(5000);
         //verify that result appears for the provided journey search
         Assert.assertTrue(isElementPresent(By.className("searchSummary")));
-
-        //close the browser
-        driver.quit();
 
     }
 
@@ -99,4 +94,12 @@ public class FlightBookingTest {
             System.setProperty("webdriver.chrome.driver", "chromedriver_linux");
         }
     }
+    @AfterClass
+	 //close the browser 
+	 public void tearDown() {
+		 if(driver!=null) {
+				System.out.println("Closing firefox browser");
+				driver.quit();
+			}
+	 }
 }

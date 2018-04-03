@@ -1,0 +1,8 @@
+Design Issues :
+1. Test classes doent had setUp or tearDown methods.
+2. driver.get(), driver.quit() were written inside test methods, which should be part of @BeforeClass and @AfterClass
+3. Instance variables were initialized inside test methods.
+
+Logical Errors :
+1. Some IDs were wrongly used.
+2. 

@@ -27,7 +27,7 @@ public class SignInTest {
     @Test
     public void shouldThrowAnErrorIfSignInDetailsAreMissing() {
 
-        driver.findElement(By.linkText("Your trips")).click();
+        driver.findElement(By.id("email")).click();
         driver.findElement(By.id("SignIn")).click();
 
         driver.findElement(By.id("signInButton")).click();

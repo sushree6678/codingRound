@@ -6,13 +6,26 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.List;
 
 public class FlightBookingTest {
-
-    WebDriver driver = new ChromeDriver();
+	WebDriver driver = null;
+	
+	@BeforeClass
+	public void setUpClass() {
+		setDriverPath();
+		driver = new ChromeDriver();
+	}
+	
+	@BeforeMethod
+	public void setUp() {
+        driver.get("https://www.cleartrip.com/");
+        waitFor(2000);
+	}
 
 
     @Test

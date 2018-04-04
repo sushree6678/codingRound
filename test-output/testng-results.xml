@@ -2,16 +2,20 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="15721" started-at="2018-04-03T17:38:13Z" finished-at="2018-04-03T17:38:29Z">
+  <suite name="Default suite" duration-ms="35451" started-at="2018-04-04T08:14:19Z" finished-at="2018-04-04T08:14:55Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="15721" started-at="2018-04-03T17:38:13Z" finished-at="2018-04-03T17:38:29Z">
-      <class name="FlightBookingTest">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:FlightBookingTest@4678c730]" name="setUpClass" is-config="true" duration-ms="4689" started-at="2018-04-03T23:08:13Z" finished-at="2018-04-03T23:08:18Z">
+    <test name="Default test" duration-ms="35451" started-at="2018-04-04T08:14:19Z" finished-at="2018-04-04T08:14:55Z">
+      <class name="SignInTest">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:SignInTest@1593948d]" name="setUpClass" is-config="true" duration-ms="30543" started-at="2018-04-04T13:44:19Z" finished-at="2018-04-04T13:44:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="testThatResultsAppearForAOneWayJourney()[pri:0, instance:FlightBookingTest@4678c730]" name="testThatResultsAppearForAOneWayJourney" duration-ms="10128" started-at="2018-04-03T23:08:18Z" finished-at="2018-04-03T23:08:28Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:SignInTest@1593948d]" name="setUp" is-config="true" duration-ms="2890" started-at="2018-04-04T13:44:50Z" finished-at="2018-04-04T13:44:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="shouldThrowAnErrorIfSignInDetailsAreMissing()[pri:0, instance:SignInTest@1593948d]" name="shouldThrowAnErrorIfSignInDetailsAreMissing" duration-ms="817" started-at="2018-04-04T13:44:53Z" finished-at="2018-04-04T13:44:54Z">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
               <![CDATA[unknown error: call function result missing 'value'
@@ -21,8 +25,8 @@ Command duration or timeout: 0 milliseconds
 Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
 System info: host: 'LAPTOP-UH3K4UI9', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_141'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\Nicky\AppData\Local\Temp\scoped_dir1324_22999}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=65.0.3325.181, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 04e75bc89565434b9ba28af87eaf16a7]]>
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\Nicky\AppData\Local\Temp\scoped_dir10232_27922}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=65.0.3325.181, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 2f38168de53e070ffb9ee4351eee2320]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.WebDriverException: unknown error: call function result missing 'value'
@@ -32,8 +36,8 @@ Command duration or timeout: 0 milliseconds
 Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
 System info: host: 'LAPTOP-UH3K4UI9', ip: '192.168.0.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_141'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\Nicky\AppData\Local\Temp\scoped_dir1324_22999}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=65.0.3325.181, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 04e75bc89565434b9ba28af87eaf16a7
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\Nicky\AppData\Local\Temp\scoped_dir10232_27922}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=65.0.3325.181, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 2f38168de53e070ffb9ee4351eee2320
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -46,9 +50,9 @@ Session ID: 04e75bc89565434b9ba28af87eaf16a7
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
-	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:118)
-	at FlightBookingTest.testThatResultsAppearForAOneWayJourney(FlightBookingTest.java:37)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:932)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:927)
+	at SignInTest.shouldThrowAnErrorIfSignInDetailsAreMissing(SignInTest.java:37)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -79,16 +83,12 @@ Session ID: 04e75bc89565434b9ba28af87eaf16a7
           </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testThatResultsAppearForAOneWayJourney -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:FlightBookingTest@4678c730]" name="setUp" is-config="true" duration-ms="0" started-at="2018-04-03T23:08:18Z" finished-at="2018-04-03T23:08:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:FlightBookingTest@4678c730]" name="tearDown" is-config="true" duration-ms="859" started-at="2018-04-03T23:08:28Z" finished-at="2018-04-03T23:08:29Z">
+        </test-method> <!-- shouldThrowAnErrorIfSignInDetailsAreMissing -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:SignInTest@1593948d]" name="tearDown" is-config="true" duration-ms="1116" started-at="2018-04-04T13:44:54Z" finished-at="2018-04-04T13:44:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- FlightBookingTest -->
+      </class> <!-- SignInTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

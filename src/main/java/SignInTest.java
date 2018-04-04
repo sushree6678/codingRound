@@ -1,7 +1,5 @@
 import com.sun.javafx.PlatformUtil;
 
-import java.util.Set;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,31 +15,35 @@ private	WebDriver driver = null;
 	@BeforeClass
 	public void setUpClass() {
 		setDriverPath();
+		 System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		driver = new ChromeDriver();
+		 driver.get("https://www.cleartrip.com/");
+		driver.manage().window().maximize();
+		waitFor(2000);
 	}
 
 	@BeforeMethod
 	public void setUp() {
-        driver.get("https://www.cleartrip.com/");
-        waitFor(2000);
+
+        driver.findElement(By.linkText("Your trips")).click();
+        driver.findElement(By.id("SignIn")).click(); 
 	}
 
     @Test
     public void shouldThrowAnErrorIfSignInDetailsAreMissing() {
-
-        driver.findElement(By.linkText("Your trips")).click();
-        driver.findElement(By.id("SignIn")).click();  
+ 
         
     //Here we have to use frame handling concept for element clicking in frame window because here iframe is present
-        driver.switchTo().frame(0);
-       
+        driver.switchTo().frame("modal_window");
         driver.findElement(By.id("signInButton")).click();
 
         String errors1 = driver.findElement(By.id("errors1")).getText();
         System.out.println(errors1);
         Assert.assertTrue(errors1.contains("There were errors in your submission"));
+        
+        driver.switchTo().defaultContent();
              
-        waitFor(5000);
+       // waitFor(5000);
         
     }
 

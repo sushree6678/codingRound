@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="FlightBookingTest">
+      <class name="SignInTest">
         <methods>
-          <include name="testThatResultsAppearForAOneWayJourney"/>
-          <include name="tearDown"/>
-          <include name="setUpClass"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="shouldThrowAnErrorIfSignInDetailsAreMissing"/>
+          <include name="setUpClass"/>
         </methods>
-      </class> <!-- FlightBookingTest -->
+      </class> <!-- SignInTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

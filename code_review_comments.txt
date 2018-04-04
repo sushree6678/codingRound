@@ -8,4 +8,7 @@ Design Issues :
 Logical Errors :
 1. Some IDs were wrongly used.
 2. In SignInTest.java, Frame concept is use because SIGNIN button present in the frame.
+    driver.switchTo().frame("modal_window");
+ for returning back to main window, I have use - driver.switchTo().defaultContent()
+
 3. In HotelBookingTest.java, Ideally we should give dates, which is missing in the code 
